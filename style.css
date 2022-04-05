@@ -339,6 +339,7 @@ dd {
     width: 100%;
     overflow: hide;
     color: #fff;
+    padding-left: 2rem;
 }
 
 .kontakt > h1 {
