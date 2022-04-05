@@ -354,6 +354,91 @@ input[type=text], select, textarea {
     margin-top: 6px; 
     margin-bottom: 16px; 
     resize: vertical;
-  }
+}
 
+.slideshow_wrapper {
+    background: #D8C3A5;
+    background: -webkit-linear-gradient(to right, #C8C3A5, #D8C3A5, #E8C3A5);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #C8C3A5, #D8C3A5, #E8C3A5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.slideshow_container{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    margin: 0 auto;
+    height: 80%;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    padding-bottom: 50px;
+}
 
+.slidetitle {
+    text-align: center;
+    color: #fff;
+}
+.slideshow{
+    margin-top: 20px;
+    width: 700px;
+    height: 400px;
+    overflow: hidden;
+}
+.rahmen{
+
+    position: relative;
+    top: 50%;
+    left: 50%;
+    border-radius: 5%;
+    transform: translate(-50%,-50%);
+}
+.navigation{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+.button{
+    width: 50px;
+    height: 10px;
+    border: 2px solid #fff;
+    margin: 6px;
+    background: #ffffff;
+    border-radius: 20%;
+    cursor: pointer;
+    transition: 0.4s;
+}
+.button:hover{
+    background: #000000;
+}
+  
+input[name="r"]{
+      position: absolute;
+      visibility: hidden;
+}
+  
+.slides{
+    width: 500%;
+    height: 100%;
+    display: flex;
+}
+  
+.bild{
+    width: 20%;
+    transition: 0.6s;
+}
+.bild img{
+    width: 100%;
+    height: 100%;
+}
+  
+#r1:checked ~ .s1{
+    margin-left: 0;
+}
+#r2:checked ~ .s1{
+    margin-left: -20%;
+}
+#r3:checked ~ .s1{
+    margin-left: -40%;
+}
+  
