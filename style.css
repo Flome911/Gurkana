@@ -442,4 +442,51 @@ input[name="r"]{
 #r3:checked ~ .s1{
     margin-left: -40%;
 }
+
+.gurkanary_container {
+    display: flex;                                                                    /* um items zu verteilen */
+    background: #D8C3A5;
+    background: -webkit-linear-gradient(to right, #C8C3A5, #D8C3A5, #E8C3A5);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #C8C3A5, #D8C3A5, #E8C3A5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */                                                                                 /* Zentrieren: */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;                                                                    /* 100% viewheight*/
+    flex-direction: column;                                                            /* Standard-Verteilung ist "row"; jetzt wird vertikal verteilt */
+  }
   
+  section {
+    display: grid;                                                                    /* Gitter erstellen */
+    grid-template-rows: repeat(4, 8rem);                                              /* 4 Reihen a achtfacher StandardSchriftgröße */
+    grid-template-columns: repeat(4, 8rem);                                           /* 4 Spalten a achtfacher StandardSchriftgröße */
+    perspective: 800px;                                                               /* Karten kommen beim Rotieren nicht zu weit heraus, aber ein perspektivischer Effekt ist dennoch spürbar */
+    grid-gap: 2rem;                                                                   /* Gibt den Karten Raum zum Atmen */
+  }
+  
+  .back {
+    background-color: #fff;                                                         /* Hintergrundfarbe der Karten: weiß */
+  }
+  
+  .face, .back {
+    position: absolute;                                                               /* erlaubt der Vorder- bzw. Rückseite, sich zu bewegen */
+    backface-visibility: hidden;                                                      /* immer nur eine Seite ist sichtbar*/
+                                                                                      /* damit die Bilder an das Grid gebunden sind und nicht ins unendliche fließen: */
+    width: 100%; 
+    height: 100%;
+    pointer-events: none;                                                             /* Damit Funktionen, die auf Mausklick reagieren, mir die Karte und nicht die Vorder- oder Rückseite zurückgeben */
+  }
+  
+  .card {
+    transform-style: preserve-3d;                                                     /* behandelt die Karte mit Vorder- und Rückseite als ein 3D-Objekt */
+    transition: all 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);                       /* Cubic-bezier ist der Animationsstil (legt 4 punkte fest; 2 für die Kurve und 2 für das Objekt (?) sehr komplex */
+    position: relative;                                                               /* Karte bleibt wo sie ist (relativ zum grid) */
+                                                                                      /* verhindert, dass die Karte ins Unendliche fließt: */
+    width: 100%;
+    height: 100%;
+    box-shadow: rgba(0,0,0,0.2) 0px 5px 15px;                                       /* Schatten: Farbton, Form, blur */
+    transform: rotateY(-180deg);                                                      /* Karte liegt standardmäßig auf dem Kopf */
+  }
+  
+  .toggleCard {
+    transform: rotateY(0deg);                                                         /* Rotiert Karte, so dass sie aufgedeckt ist */
+  }
+

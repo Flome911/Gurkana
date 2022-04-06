@@ -31,11 +31,11 @@
      showgrid="false"
      inkscape:zoom="1.7333984"
      inkscape:cx="148.84057"
-     inkscape:cy="54.805636"
-     inkscape:window-width="1280"
-     inkscape:window-height="961"
+     inkscape:cy="100.95775"
+     inkscape:window-width="1600"
+     inkscape:window-height="837"
      inkscape:window-x="-8"
-     inkscape:window-y="-8"
+     inkscape:window-y="1016"
      inkscape:window-maximized="1"
      inkscape:current-layer="g22" />
   <g
@@ -44,7 +44,7 @@
      id="g22">
     <g
        id="g839"
-       transform="matrix(2.2823451,0,0,2.2823451,-98.015067,-38.772181)">
+       transform="matrix(1.7642258,0,0,1.7642258,-46.706977,-6.7244279)">
       <path
          style="fill:#c24132;fill-opacity:1;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          d="m 68.124461,50.583432 c 0,0 -11.2181,24.475854 0.611897,38.753434 11.829997,14.277584 15.297407,15.297414 20.192577,15.705344 4.89517,0.40793 8.77052,-3.46741 12.033955,-2.24362 3.26345,1.22379 9.38241,5.71103 18.15293,1.01983 8.77051,-4.691214 16.72517,-11.014144 15.50137,-25.903614 C 133.3934,63.025325 132.98547,43.444641 122.58323,29.574991 112.18099,15.70534 94.436005,17.94896 94.436005,17.94896 c 0,0 -7.54672,3.467413 -10.6062,10.198273 -3.05949,6.730859 -15.705344,22.436199 -15.705344,22.436199 z"
