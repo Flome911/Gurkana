@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg16"
+   width="256"
+   height="204.8"
+   viewBox="0 0 256 204.8"
+   sodipodi:docname="Kartoffel.svg"
+   inkscape:version="1.1.2 (b8e25be833, 2022-02-05)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <title
+     id="title4895">Kartoffel Basis</title>
+  <defs
+     id="defs20" />
+  <sodipodi:namedview
+     id="namedview18"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="1.7333984"
+     inkscape:cx="148.84057"
+     inkscape:cy="54.805636"
+     inkscape:window-width="1280"
+     inkscape:window-height="961"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g22" />
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="Image"
+     id="g22">
+    <g
+       id="g839"
+       transform="matrix(2.2823451,0,0,2.2823451,-98.015067,-38.772181)">
+      <path
+         style="fill:#c24132;fill-opacity:1;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 68.124461,50.583432 c 0,0 -11.2181,24.475854 0.611897,38.753434 11.829997,14.277584 15.297407,15.297414 20.192577,15.705344 4.89517,0.40793 8.77052,-3.46741 12.033955,-2.24362 3.26345,1.22379 9.38241,5.71103 18.15293,1.01983 8.77051,-4.691214 16.72517,-11.014144 15.50137,-25.903614 C 133.3934,63.025325 132.98547,43.444641 122.58323,29.574991 112.18099,15.70534 94.436005,17.94896 94.436005,17.94896 c 0,0 -7.54672,3.467413 -10.6062,10.198273 -3.05949,6.730859 -15.705344,22.436199 -15.705344,22.436199 z"
+         id="path535" />
+      <ellipse
+         style="fill:#ffffff;fill-rule:evenodd;stroke:#000000"
+         id="path886"
+         cx="89.54084"
+         cy="58.130157"
+         rx="14.481547"
+         ry="13.665686" />
+      <ellipse
+         style="fill:#ffffff;fill-rule:evenodd;stroke:#000000"
+         id="path910"
+         cx="116.3623"
+         cy="62.617401"
+         rx="12.543876"
+         ry="14.073616" />
+      <ellipse
+         style="fill:#000000;fill-rule:evenodd"
+         id="path1036"
+         cx="91.58049"
+         cy="62.821358"
+         rx="8.7705145"
+         ry="8.3625832" />
+      <ellipse
+         style="fill:#000000;fill-rule:evenodd;stroke:none"
+         id="path1140"
+         cx="116.26031"
+         cy="66.288773"
+         rx="8.9744797"
+         ry="8.7705145" />
+      <circle
+         style="fill:#ffffff;fill-rule:evenodd"
+         id="path4550-6"
+         cx="116.75043"
+         cy="61.007324"
+         r="1.6317236" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 81.994111,80.362389 c 0,0 17.273083,25.646631 33.351359,5.48408"
+         id="path4446"
+         sodipodi:nodetypes="cc" />
+      <circle
+         style="fill:#ffffff;fill-rule:evenodd"
+         id="path4550"
+         cx="92.192383"
+         cy="58.74205"
+         r="1.6317236" />
+    </g>
+  </g>
+  <metadata
+     id="metadata4893">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>Kartoffel Basis</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>
