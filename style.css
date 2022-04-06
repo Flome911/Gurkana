@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
-* {
-    box-sizing: border-box;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap'); /* Poppins font import */
+* { /* allgemeine Einstellungen für die gesamte datei */
+    box-sizing: border-box; /*berechnet bei der größe von elementen direkt mit Border */
     margin:0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
@@ -8,12 +8,12 @@
     overflow: none;
 }
 
-.navbar {
+.navbar { /* äußerer Rahmen für navbar*/
     background: #D8C3A5;
     height: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: flex; /*anordnen von elementen nebeneinander*/
+    justify-content: center; /*um die Mitte anordnen, abstand zwischen erstem element und rand und letztem element und rand gleich*/
+    align-items: center; /* elemente werden auf der Querachse angeordnet */
     font-size: 1.2rem;
     position: sticky;
     width: 100%;
@@ -21,56 +21,56 @@
     z-index: 999;
 }
 
-.navbar__container {
+.navbar__container { /*hier sind navbar logo container und navbar menu container drin*/
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /*Abstände zwischen Elementen gleich [ navbar logo ------ navbar menu ]*/
     height: 80px;
     z-index: 1;
     width: 100%;
-    max-width: 1300px;
-    margin: 0 auto;
+    max-width: 1300px; /* navbar wird nicht laenger als 1300 px*/
+    margin: 0 auto; /*auto = links rechts gleich groß*/
     padding: 0 50px;
 }
 
-#navbar__logo {
-    background: #fff;  /* fallback for old browsers */
+#navbar__logo { /*container fuer logo*/
+    background: #fff;  
     background-size: 100%;
-    -webkit-background-clip: text;
+    -webkit-background-clip: text; /*background = text*/
     -moz-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent; /*macht schrift transparent*/
+    -moz-text-fill-color: transparent; 
     display: grid;
     grid-template-columns: 1fr;
     align-items: center;
-    cursor: pointer;
+    cursor: pointer; /* mauszeiger wird zu hand mit finger pointer */
     text-decoration: none;
     padding-left: 30px;
 }
 
-#navbar__logo .span {
+#navbar__logo .span { /*tatsaechliche logo-span*/
     padding: 0%;
     margin: 0%;
     font-size: 1rem;
 }
 
-#navbar__logo:hover {
+#navbar__logo:hover { 
     background: #E85A4F;
     background-size: 100%;
     -webkit-background-clip: text;
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent;
     -moz-text-fill-color: transparent;
-    transition: 0.3s ease all;
+    transition: 0.3s ease all; /*weicher uebergang bei hover animation*/
 }
 
 
-.navbar__menu {
+.navbar__menu { /* hier sind die navbar items drin*/
     display: flex;
     align-items: center;
-    list-style:none;
+    list-style:none; /* entfernt listen-zeichen (punkte usw)*/
 }
 
-.navbar__item {
+.navbar__item { /* hier sind die links drin*/
     height: 80px;
 }
 
@@ -80,9 +80,9 @@
     align-items: center;
     justify-content: center;
     width: 125px;
-    text-decoration: none;
+    text-decoration: none; /* entfernt link-spezifische decorations (unterschtrichen usw.) */
     height: 100%;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease; /*zusaetzlich mit hover transition um weicheren uebergang zu animieren*/
 }
 
 
@@ -93,7 +93,7 @@
 }
 
 
-/* The container <div> - needed to position the dropdown content */
+/* container <div> - dropdown positionieren */
 .dropdown {
     position: relative;
     display: inline-block;
@@ -108,7 +108,7 @@
     z-index: 1;
   }
 
-.dropdown-content a {
+.dropdown-content a { /* dropdown links*/
     color: #fff;
     padding: 12px 16px;
     text-decoration: none;
@@ -116,7 +116,7 @@
 }
 
 .dropdown:hover .dropdown-content {
-    display: block;
+    display: block; /*wird bei hover sichtbar*/
 }
 
 
@@ -218,7 +218,7 @@
 
 .home_container{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr; /* bild von gemüse/banane und box mit text nebeneinander, gleich große felder*/
     align-items: center;
     justify-content: center;
     margin: 0 auto;
@@ -251,9 +251,9 @@
     background: linear-gradient(to right, #C8C3A5, #D8C3A5, #E8C3A5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     color: #fff;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column; /* mittig als säule*/
+    justify-content: center; /* hier mittig */
+    align-items: center; /*Querachse*/
     width: 100%;
     max-width: 100%;
     overflow: hidden;
@@ -343,18 +343,18 @@ dd {
 }
 
 .kontakt > h1 {
-    padding: 1rem;
+    padding-top: 2rem;
 }
 
-input[type=text], select, textarea {
+input[type=text], textarea {
     width: 50%; 
     padding: 12px; 
     border: 1px solid #ccc; 
-    border-radius: 4px; 
+    border-radius: 4px; /* runde ecken */
     box-sizing: border-box; 
     margin-top: 6px; 
     margin-bottom: 16px; 
-    resize: vertical;
+    resize: vertical; /* textfeld nach unten vergrößerbar */
 }
 
 .slideshow_wrapper {
