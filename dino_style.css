@@ -23,6 +23,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 80vh; /* vh = viewport height, also kann das spiel nie höher als die Fenstergröße sein*/
+    color: #fff;
 }
 
 
