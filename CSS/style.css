@@ -465,7 +465,7 @@ input[name="r"]{
     flex-direction: column;                                                            /* Standard-Verteilung ist "row"; jetzt wird vertikal verteilt */
   }
   
-  section {
+  #memory {
     display: grid;                                                                    /* Gitter erstellen */
     grid-template-rows: repeat(4, 8rem);                                              /* 4 Reihen a achtfacher StandardSchriftgröße */
     grid-template-columns: repeat(4, 8rem);                                           /* 4 Spalten a achtfacher StandardSchriftgröße */
@@ -474,9 +474,18 @@ input[name="r"]{
   }
   
   .back {
-    background-color: #fff;                                                         /* Hintergrundfarbe der Karten: weiß */
+    background:
+    radial-gradient(black 15%, transparent 16%) 0 0,
+    radial-gradient(black 15%, transparent 16%) 8px 8px,
+    radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+    radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+    background-color:#282828;
+    background-size:16px 16px;                                                     /* Hintergrundfarbe der Karten: weiß */
   }
   
+  .face {
+      background-color: #fff;
+  }
   .face, .back {
     position: absolute;                                                               /* erlaubt der Vorder- bzw. Rückseite, sich zu bewegen */
     backface-visibility: hidden;                                                      /* immer nur eine Seite ist sichtbar*/
@@ -487,14 +496,20 @@ input[name="r"]{
   }
   
   .card {
-    background-color: #fff;   
+    background:
+    radial-gradient(black 15%, transparent 16%) 0 0,
+    radial-gradient(black 15%, transparent 16%) 8px 8px,
+    radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+    radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+    background-color:#282828;
+    background-size:16px 16px;   
     transform-style: preserve-3d;                                                     /* behandelt die Karte mit Vorder- und Rückseite als ein 3D-Objekt */
     transition: all 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);                       /* Cubic-bezier ist der Animationsstil (legt 4 punkte fest; 2 für die Kurve und 2 für das Objekt (?) sehr komplex */
     position: relative;                                                               /* Karte bleibt wo sie ist (relativ zum grid) */
                                                                                       /* verhindert, dass die Karte ins Unendliche fließt: */
     width: 100%;
     height: 100%;
-    box-shadow: rgba(0,0,0,0.2) 0px 5px 15px;                                       /* Schatten: Farbton, Form, blur */
+    box-shadow: rgba(0,0,0,10) 0px 5px 30px;                                       /* Schatten: Farbton, Form, blur */
     transform: rotateY(-180deg);                                                      /* Karte liegt standardmäßig auf dem Kopf */
   }
   
