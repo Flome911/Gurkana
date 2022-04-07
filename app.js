@@ -1,6 +1,6 @@
                                                                                     // Alles aus Html anpacken:
 const section = document.querySelector('section');                                  // Section, in der das Spiel statt findet.
-const VersucheCount = document.querySelector("span");                               // VersucheZähler"Anpacker"
+const VersucheCount = document.querySelector("#VersucheCount");                               // VersucheZähler"Anpacker"
 let Versuche = 10;                                                                  // der Wert für den VersucheZähler, damit man diese auch runterzählen kann (let: variable)
 
                                                                                     // Variable an Text binden:

@@ -238,7 +238,11 @@
     flex-direction: column;
     justify-content: center;
     transition: 0.3s ease-in;
+    box-shadow: rgba(0,0,0,0.2) 0px 5px 15px;     
 }
+
+
+
 
 .home_aboutme {
     text-align: justify;
@@ -476,6 +480,7 @@ input[name="r"]{
   }
   
   .card {
+    background-color: #fff;   
     transform-style: preserve-3d;                                                     /* behandelt die Karte mit Vorder- und Rückseite als ein 3D-Objekt */
     transition: all 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);                       /* Cubic-bezier ist der Animationsstil (legt 4 punkte fest; 2 für die Kurve und 2 für das Objekt (?) sehr komplex */
     position: relative;                                                               /* Karte bleibt wo sie ist (relativ zum grid) */
