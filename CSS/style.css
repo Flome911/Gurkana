@@ -1,0 +1,504 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap'); /* Poppins font import */
+* { /* allgemeine Einstellungen für die gesamte datei */
+    box-sizing: border-box; /*berechnet bei der größe von elementen direkt mit Border */
+    margin:0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+    overflow: none;
+}
+
+body {
+    background: #D8C3A5;
+    background: -webkit-linear-gradient(to right, #C8C3A5, #D8C3A5, #E8C3A5);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #C8C3A5, #D8C3A5, #E8C3A5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.navbar { /* äußerer Rahmen für navbar*/
+    background: #D8C3A5;
+    height: 80px;
+    display: flex; /*anordnen von elementen nebeneinander*/
+    justify-content: center; /*um die Mitte anordnen, abstand zwischen erstem element und rand und letztem element und rand gleich*/
+    align-items: center; /* elemente werden auf der Querachse angeordnet */
+    font-size: 1.2rem;
+    position: sticky;
+    width: 100%;
+    top: 0;
+    z-index: 999;
+}
+
+.navbar__container { /*hier sind navbar logo container und navbar menu container drin*/
+    display: flex;
+    justify-content: space-between; /*Abstände zwischen Elementen gleich [ navbar logo ------ navbar menu ]*/
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px; /* navbar wird nicht laenger als 1300 px*/
+    margin: 0 auto; /*auto = links rechts gleich groß*/
+    padding: 0 50px;
+}
+
+#navbar__logo { /*container fuer logo*/
+    background: #fff;  
+    background-size: 100%;
+    -webkit-background-clip: text; /*background = text*/
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; /*macht schrift transparent*/
+    -moz-text-fill-color: transparent; 
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    cursor: pointer; /* mauszeiger wird zu hand mit finger pointer */
+    text-decoration: none;
+    padding-left: 30px;
+}
+
+#navbar__logo .span { /*tatsaechliche logo-span*/
+    padding: 0%;
+    margin: 0%;
+    font-size: 1rem;
+}
+
+#navbar__logo:hover { 
+    background: #E85A4F;
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    transition: 0.3s ease all; /*weicher uebergang bei hover animation*/
+}
+
+
+.navbar__menu { /* hier sind die navbar items drin*/
+    display: flex;
+    align-items: center;
+    list-style:none; /* entfernt listen-zeichen (punkte usw)*/
+}
+
+.navbar__item { /* hier sind die links drin*/
+    height: 80px;
+}
+
+.navbar__links {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 125px;
+    text-decoration: none; /* entfernt link-spezifische decorations (unterschtrichen usw.) */
+    height: 100%;
+    transition: all 0.3s ease; /*zusaetzlich mit hover transition um weicheren uebergang zu animieren*/
+}
+
+
+.navbar__links:hover {
+    color: #E85A4F;
+    transition: all 0.3s ease;
+    background-color: #d1b791;
+}
+
+
+/* container <div> - dropdown positionieren */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+/* dropdown versteckt */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #D8C3A5;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+.dropdown-content a { /* dropdown links*/
+    color: #fff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block; /*wird bei hover sichtbar*/
+}
+
+
+.dropdown-content a:hover {
+    color: #E85A4F;
+    background-color: #d1b791;
+}
+
+/* Mobile anpassung WIP :)
+@media screen and (max-width: 600px) {
+    .navbar__container {
+        display: flex;
+        justify-content: space-between;
+        height: 80px;
+        z-index: 1;
+        width: 100%;
+        max-width: 1300px;
+        padding: 0;
+    }
+
+    .navbar__menu {
+        display: grid;
+        grid-template-columns: auto;
+        margin: 0;
+        width: 100%;
+        position: absolute;
+        top: -1000px;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: -1;
+        
+    }
+
+    .navbar__menu.active {
+        background: #CDCDCD;
+        top: 100%;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: 99;
+        height: 70vh;
+        font-size: 1.6rem;
+    }
+
+    #navbar__logo {
+        padding-left: 25px;
+    }
+
+    .navbar__toggle .bar {
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        transition: all 0.3s ease-in-out;
+        background: #fff;
+    }
+
+    .navbar__item {
+        width: 100%;
+    }
+
+    .navbar__links{
+        text-align: center;
+        padding: 2rem;
+        width: 100%;
+        display: table;
+    }
+
+    #mobile-menu {
+        position: absolute;
+        top: 20%;
+        right: 5%;
+        transform: translate(5%, 20%);
+    }
+    
+    .navbar__toggle .bar {
+        display: block;
+        cursor: pointer;
+    }
+
+    #mobile-menu.is-active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    #mobile-menu.is-active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    #mobile-menu.is-active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+*/
+/* Home */
+
+.home {
+    background: #D8C3A5;
+    background: -webkit-linear-gradient(to right, #C8C3A5, #D8C3A5, #E8C3A5);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #C8C3A5, #D8C3A5, #E8C3A5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.home_container{
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* bild von gemüse/banane und box mit text nebeneinander, gleich große felder*/
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    height: 80%;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    padding: 0 50px;
+}
+
+.home_img {
+    margin: 1rem;
+    height: 400px;
+    width: 300px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: 0.3s ease-in;
+    box-shadow: rgba(0,0,0,0.2) 0px 5px 15px;     
+}
+
+
+
+
+.home_aboutme {
+    text-align: justify;
+    color: #fff;
+}
+
+.lebenslauf {
+    background: #D8C3A5;
+    background: -webkit-linear-gradient(to right, #C8C3A5, #D8C3A5, #E8C3A5);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #C8C3A5, #D8C3A5, #E8C3A5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #fff;
+    display: flex;
+    flex-direction: column; /* mittig als säule*/
+    justify-content: center; /* hier mittig */
+    align-items: center; /*Querachse*/
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    padding: 3rem 0;
+}
+
+
+.lebenslauf_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem auto;
+    height: 80%;
+    z-index: 1;
+    width: 100%;
+    max-width: 100%;
+    padding: 0 50px;
+}
+
+.lltitel {
+    margin-top: -20rem;
+    margin-left: 1rem;
+    max-width: 100%;
+}
+
+.table_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    margin-left: -10rem;
+    margin-top: 2rem;
+    max-width: 1300px;
+}
+
+@media screen and (max-width: 1000px) {
+
+    .lebenslauf {
+        padding: 0;
+
+    }
+
+    .lebenslauf_container > h1 {
+        margin-top: -25rem;
+    }
+    .table_container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+@media screen and (max-width: 700px) {
+
+    .lebenslauf {
+        padding: 0;
+
+    }
+
+    .lebenslauf_container > h1 {
+        margin-top: -45rem;
+    }
+    .table_container {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+.daten {
+    width: 100%;
+    max-width: 100%;
+    margin: 0rem 2rem;
+    float: left;
+}
+
+dd {
+    margin: 0rem 1rem;
+}
+
+.kontakt {
+    background: #D8C3A5;
+    background: -webkit-linear-gradient(to right, #C8C3A5, #D8C3A5, #E8C3A5);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #C8C3A5, #D8C3A5, #E8C3A5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    height: 95vh;
+    width: 100%;
+    overflow: hide;
+    color: #fff;
+    padding-left: 2rem;
+}
+
+.kontakt > h1 {
+    padding-top: 2rem;
+}
+
+input[type=text], textarea {
+    width: 50%; 
+    padding: 12px; 
+    border: 1px solid #ccc; 
+    border-radius: 4px; /* runde ecken */
+    box-sizing: border-box; 
+    margin-top: 6px; 
+    margin-bottom: 16px; 
+    resize: vertical; /* textfeld nach unten vergrößerbar */
+}
+
+.slideshow_wrapper {
+    background: #D8C3A5;
+    background: -webkit-linear-gradient(to right, #C8C3A5, #D8C3A5, #E8C3A5);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #C8C3A5, #D8C3A5, #E8C3A5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.slideshow_container{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    margin: 0 auto;
+    height: 80%;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    padding-bottom: 50px;
+}
+
+.slidetitle {
+    text-align: center;
+    color: #fff;
+}
+.slideshow{
+    margin-top: 20px;
+    width: 700px;
+    height: 400px;
+    overflow: hidden;
+}
+.rahmen{
+
+    position: relative;
+    top: 50%;
+    left: 50%;
+    border-radius: 5%;
+    transform: translate(-50%,-50%);
+}
+.navigation{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+.button{
+    width: 50px;
+    height: 10px;
+    border: 2px solid #fff;
+    margin: 6px;
+    background: #ffffff;
+    border-radius: 20%;
+    cursor: pointer;
+    transition: 0.4s;
+}
+.button:hover{
+    background: #000000;
+}
+  
+input[name="r"]{
+      position: absolute;
+      visibility: hidden;
+}
+  
+.slides{
+    width: 500%;
+    height: 100%;
+    display: flex;
+}
+  
+.bild{
+    width: 20%;
+    transition: 0.6s;
+}
+.bild img{
+    width: 100%;
+    height: 100%;
+}
+  
+#r1:checked ~ .s1{
+    margin-left: 0;
+}
+#r2:checked ~ .s1{
+    margin-left: -20%;
+}
+#r3:checked ~ .s1{
+    margin-left: -40%;
+}
+
+.gurkanary_container {
+	color: #fff;
+    display: flex;                                                                    /* um items zu verteilen */
+    background: #D8C3A5;
+    background: -webkit-linear-gradient(to right, #C8C3A5, #D8C3A5, #E8C3A5);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #C8C3A5, #D8C3A5, #E8C3A5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */                                                                                 /* Zentrieren: */
+    justify-content: center;
+    align-items: center;
+    height: 80vh;                                                                    /* 100% viewheight*/
+    flex-direction: column;                                                            /* Standard-Verteilung ist "row"; jetzt wird vertikal verteilt */
+  }
+  
+  section {
+    display: grid;                                                                    /* Gitter erstellen */
+    grid-template-rows: repeat(4, 8rem);                                              /* 4 Reihen a achtfacher StandardSchriftgröße */
+    grid-template-columns: repeat(4, 8rem);                                           /* 4 Spalten a achtfacher StandardSchriftgröße */
+    perspective: 800px;                                                               /* Karten kommen beim Rotieren nicht zu weit heraus, aber ein perspektivischer Effekt ist dennoch spürbar */
+    grid-gap: 2rem;                                                                   /* Gibt den Karten Raum zum Atmen */
+  }
+  
+  .back {
+    background-color: #fff;                                                         /* Hintergrundfarbe der Karten: weiß */
+  }
+  
+  .face, .back {
+    position: absolute;                                                               /* erlaubt der Vorder- bzw. Rückseite, sich zu bewegen */
+    backface-visibility: hidden;                                                      /* immer nur eine Seite ist sichtbar*/
+                                                                                      /* damit die Bilder an das Grid gebunden sind und nicht ins unendliche fließen: */
+    width: 100%; 
+    height: 100%;
+    pointer-events: none;                                                             /* Damit Funktionen, die auf Mausklick reagieren, mir die Karte und nicht die Vorder- oder Rückseite zurückgeben */
+  }
+  
+  .card {
+    background-color: #fff;   
+    transform-style: preserve-3d;                                                     /* behandelt die Karte mit Vorder- und Rückseite als ein 3D-Objekt */
+    transition: all 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);                       /* Cubic-bezier ist der Animationsstil (legt 4 punkte fest; 2 für die Kurve und 2 für das Objekt (?) sehr komplex */
+    position: relative;                                                               /* Karte bleibt wo sie ist (relativ zum grid) */
+                                                                                      /* verhindert, dass die Karte ins Unendliche fließt: */
+    width: 100%;
+    height: 100%;
+    box-shadow: rgba(0,0,0,0.2) 0px 5px 15px;                                       /* Schatten: Farbton, Form, blur */
+    transform: rotateY(-180deg);                                                      /* Karte liegt standardmäßig auf dem Kopf */
+  }
+  
+  .toggleCard {
+    transform: rotateY(0deg);                                                         /* Rotiert Karte, so dass sie aufgedeckt ist */
+  }
+
