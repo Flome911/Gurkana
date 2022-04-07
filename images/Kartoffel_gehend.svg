@@ -4,9 +4,9 @@
 <svg
    version="1.1"
    id="svg16"
-   width="256"
-   height="204.8"
-   viewBox="0 0 256 204.8"
+   width="125.89135"
+   height="203.60979"
+   viewBox="0 0 125.89135 203.60978"
    sodipodi:docname="Kartoffel_gehend.svg"
    inkscape:version="1.1.2 (b8e25be833, 2022-02-05)"
    inkscape:export-filename="C:\Users\FGerstenlauer\OneDrive\Desktop\160_Webentwicklung\Website\GurKaNary\Kartoffel\Kartoffel_stehend.png"
@@ -33,18 +33,25 @@
      inkscape:pagecheckerboard="0"
      showgrid="false"
      inkscape:zoom="1.7333984"
-     inkscape:cx="-20.19155"
-     inkscape:cy="106.72676"
+     inkscape:cx="-60.8631"
+     inkscape:cy="106.14986"
      inkscape:window-width="1600"
      inkscape:window-height="837"
      inkscape:window-x="-8"
      inkscape:window-y="1016"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g5103" />
+     inkscape:current-layer="g5103"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     width="125.89135px"
+     height="203.60979px" />
   <g
      inkscape:groupmode="layer"
      inkscape:label="Image"
-     id="g22">
+     id="g22"
+     transform="translate(-65.054326,-0.59510783)">
     <g
        id="g5103">
       <g

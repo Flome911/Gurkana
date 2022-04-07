@@ -8,6 +8,12 @@
     overflow: none;
 }
 
+body {
+    background: #D8C3A5;
+    background: -webkit-linear-gradient(to right, #C8C3A5, #D8C3A5, #E8C3A5);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #C8C3A5, #D8C3A5, #E8C3A5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
 .navbar { /* äußerer Rahmen für navbar*/
     background: #D8C3A5;
     height: 80px;
@@ -448,6 +454,7 @@ input[name="r"]{
 }
 
 .gurkanary_container {
+	color: #fff;
     display: flex;                                                                    /* um items zu verteilen */
     background: #D8C3A5;
     background: -webkit-linear-gradient(to right, #C8C3A5, #D8C3A5, #E8C3A5);  /* Chrome 10-25, Safari 5.1-6 */

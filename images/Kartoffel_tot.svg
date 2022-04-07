@@ -4,9 +4,9 @@
 <svg
    version="1.1"
    id="svg16"
-   width="256"
-   height="204.8"
-   viewBox="0 0 256 204.8"
+   width="125.89135"
+   height="203.60979"
+   viewBox="0 0 125.89135 203.60979"
    sodipodi:docname="Kartoffel_tot.svg"
    inkscape:version="1.1.2 (b8e25be833, 2022-02-05)"
    inkscape:export-filename="C:\Users\FGerstenlauer\OneDrive\Desktop\160_Webentwicklung\Website\GurKaNary\Kartoffel\Kartoffel.png"
@@ -33,21 +33,27 @@
      inkscape:pagecheckerboard="0"
      showgrid="false"
      inkscape:zoom="2.4513955"
-     inkscape:cx="141.55203"
+     inkscape:cx="22.640166"
      inkscape:cy="95.047902"
      inkscape:window-width="1600"
      inkscape:window-height="837"
      inkscape:window-x="-8"
      inkscape:window-y="1016"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g22" />
+     inkscape:current-layer="g22"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     height="203.60979px" />
   <g
      inkscape:groupmode="layer"
      inkscape:label="Image"
-     id="g22">
+     id="g22"
+     transform="translate(-79.494973,-0.17988566)">
     <g
        id="g843"
-       transform="matrix(1.3394235,0,0,1.3394235,-4.6402066,-23.013861)">
+       transform="matrix(1.3394235,0,0,1.3300556,9.2294444,-22.645579)">
       <g
          id="path535">
         <path

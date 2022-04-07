@@ -1,4 +1,15 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="dino_style.css">  
+    <script src="dino_app.js" type="module"></script> <!--module bewirkt dass es nach dem Laden das Skript ausgeführt wird-->
+</head>
+<body>
+    <!DOCTYPE html>
 <html lang="de">
     <head>
         <meta charset="UTF-8">
@@ -42,21 +53,14 @@
                 </ul>
             </div>
         </nav>
-        <div class="kontakt">
-            <h1>Kontakt</h1>
-            <form action="#">
-          
-            <br><input type="text" id="fname" name="firstname" placeholder="Dein Vorname">
-          
-            <br><input type="text" id="lname" name="lastname" placeholder="Dein Nachname">
-          
-            <br><input type="text" id="email" name="e-mail" placeholder="Email">
-
-            <br><textarea id="subject" name="subject" placeholder="Text" style="height:200px"></textarea>
-          
-            <br><input type="submit" value="Abschicken">
-          
-            </form>
-          </div> 
-    </body>
+        <div class="run_container">
+        <div class="world" data-world>
+            <div class="score" data-score>0</div>
+            <div class="start-screen" data-startScreen>Press any key to start</div>
+            <img src="images/ground.png" alt="" class="ground" data-ground>
+            <img src="images/ground.png" alt="" class="ground" data-ground>
+            <img src="images/kartoffel_stehend.svg" alt="character" class="character" data-character>
+        </div>
+        </div>
+</body>
 </html>
