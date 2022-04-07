@@ -461,7 +461,7 @@ input[name="r"]{
     background: linear-gradient(to right, #C8C3A5, #D8C3A5, #E8C3A5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */                                                                                 /* Zentrieren: */
     justify-content: center;
     align-items: center;
-    height: 100vh;                                                                    /* 100% viewheight*/
+    height: 80vh;                                                                    /* 100% viewheight*/
     flex-direction: column;                                                            /* Standard-Verteilung ist "row"; jetzt wird vertikal verteilt */
   }
   
