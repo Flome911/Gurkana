@@ -41,6 +41,7 @@ body {
 #navbar__logo { /*container fuer logo*/
     background: #fff;  
     background-size: 100%;
+    background-clip: text;
     -webkit-background-clip: text; /*background = text*/
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent; /*macht schrift transparent*/
@@ -62,6 +63,7 @@ body {
 #navbar__logo:hover { 
     background: #E85A4F;
     background-size: 100%;
+    background-clip: text;
     -webkit-background-clip: text;
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent;
