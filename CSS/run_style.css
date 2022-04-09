@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+*, *::before, *::after { /* allgemeine einstellungen für das gesamte dokument, before und after */
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    background: #D8C3A5;
+    background: -webkit-linear-gradient(to right, #C8C3A5, #D8C3A5, #E8C3A5);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #C8C3A5, #D8C3A5, #E8C3A5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+
+.run_container {
+    background: #D8C3A5;
+    background: -webkit-linear-gradient(to right, #C8C3A5, #D8C3A5, #E8C3A5);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #C8C3A5, #D8C3A5, #E8C3A5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh; /* vh = viewport height, also kann das spiel nie höher als die Fenstergröße sein*/
+    color: #fff;
+}
+
+
+.navbar { /* äußerer Rahmen für navbar*/
+    background: #D8C3A5;
+    height: 80px;
+    display: flex; /*anordnen von elementen nebeneinander*/
+    justify-content: center; /*um die Mitte anordnen, abstand zwischen erstem element und rand und letztem element und rand gleich*/
+    align-items: center; /* elemente werden auf der Querachse angeordnet */
+    font-size: 1.2rem;
+    position: sticky;
+    width: 100%;
+    top: 0;
+    z-index: 999;
+}
+
+.navbar__container { /*hier sind navbar logo container und navbar menu container drin*/
+    display: flex;
+    justify-content: space-between; /*Abstände zwischen Elementen gleich [ navbar logo ------ navbar menu ]*/
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px; /* navbar wird nicht laenger als 1300 px*/
+    margin: 0 auto; /*auto = links rechts gleich groß*/
+    padding: 0 50px;
+}
+
+#navbar__logo { /*container fuer logo*/
+    background: #fff;  
+    background-size: 100%;
+    -webkit-background-clip: text; /*background = text*/
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; /*macht schrift transparent*/
+    -moz-text-fill-color: transparent; 
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    cursor: pointer; /* mauszeiger wird zu hand mit finger pointer */
+    text-decoration: none;
+    padding-left: 30px;
+}
+
+#navbar__logo .span { /*tatsaechliche logo-span*/
+    padding: 0%;
+    margin: 0%;
+    font-size: 1rem;
+}
+
+#navbar__logo:hover { 
+    background: #E85A4F;
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    transition: 0.3s ease all; /*weicher uebergang bei hover animation*/
+}
+
+
+.navbar__menu { /* hier sind die navbar items drin*/
+    display: flex;
+    align-items: center;
+    list-style:none; /* entfernt listen-zeichen (punkte usw)*/
+}
+
+.navbar__item { /* hier sind die links drin*/
+    height: 80px;
+}
+
+.navbar__links {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 125px;
+    text-decoration: none; /* entfernt link-spezifische decorations (unterschtrichen usw.) */
+    height: 100%;
+    transition: all 0.3s ease; /*zusaetzlich mit hover transition um weicheren uebergang zu animieren*/
+}
+
+
+.navbar__links:hover {
+    color: #E85A4F;
+    transition: all 0.3s ease;
+    background-color: #d1b791;
+}
+
+
+/* container <div> - dropdown positionieren */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+/* dropdown versteckt */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #D8C3A5;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+.dropdown-content a { /* dropdown links*/
+    color: #fff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block; /*wird bei hover sichtbar*/
+}
+
+
+.dropdown-content a:hover {
+    color: #E85A4F;
+    background-color: #d1b791;
+}
+
+.world {
+    overflow: hidden;
+    position: relative;
+    user-select: none;
+}
+
+.score {
+    position: absolute;
+    font-size: 3vmin;
+    right: 1vmin;
+    top: 1vmin;
+}
+
+.start-screen {
+    position: absolute;
+    font-size: 5vmin;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hide {
+    display: none;
+}
+
+.ground {
+    --left: 0;
+    position: absolute;
+    width: 300%;
+    bottom: 0;
+    left: calc(var(--left) * 1%)
+}
+
+
+
+.character {
+    --bottom: 2;
+    position: absolute;
+    left: 1%;
+    height: 30%;
+    bottom: calc(var(--bottom) * 1%);
+    stroke: transparent;
+    stroke-width: 0px;
+}
+
+.cactus {
+    --bottom: 0;
+    bottom: 2%;
+    position: absolute;
+    left: calc(var(--left) * 1%);
+    height: 30%;
+
+}
