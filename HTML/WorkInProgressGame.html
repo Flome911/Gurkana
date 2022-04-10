@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>GurKaNa Project</title>
         <link rel="stylesheet" href="../CSS/style.css">
+        <link rel="stylesheet" href="../CSS/wip_style.css">
         <script src="https://kit.fontawesome.com/937c1160e7.js" crossorigin="anonymous"></script>
     </head>
     <body>
@@ -23,11 +24,11 @@
                     </li>
                     <li class="navbar__item dropdown">
                         <a href="#" class="navbar__links dropbtn" id="projekte-page">Projekt</a>
-                        <div class="dropdown-content">
-                            <a href="gurkanary.html">GurKaNary</a>
-                            <a href="rungame.html">Kartoffelrun</a>
-                            <a href="WorkInProgressGame.html">WIP-Game</a>
-                         </div>
+                            <div class="dropdown-content">
+                                <a href="gurkanary.html">GurKaNary</a>
+                                <a href="rungame.html">Kartoffelrun</a>
+                                <a href="WorkInProgressGame.html">WIP-Game</a>
+                             </div>
                     </li>
                     <li class="navbar__item dropdown">
                             <a href="#" class="navbar__links dropbtn" id="lebenslauf-page">Über uns</a>
@@ -43,21 +44,14 @@
                 </ul>
             </div>
         </nav>
-        <div class="kontakt">
-            <h1>Kontakt</h1>
-            <form action="#">
-          
-            <br><input type="text" id="fname" name="firstname" placeholder="Dein Vorname">
-          
-            <br><input type="text" id="lname" name="lastname" placeholder="Dein Nachname">
-          
-            <br><input type="text" id="email" name="e-mail" placeholder="Email">
-
-            <br><textarea id="subject" name="subject" placeholder="Text" style="height:200px"></textarea>
-          
-            <br><input type="submit" value="Abschicken">
-          
-            </form>
-          </div> 
+        <div class="game_container"> 
+            <canvas id="canvas1"></canvas>
+            <img src="../images/Ninja Frog/spritesheet.png" alt="" id="playerImage">
+            <img src="../images/Background/blue_full.png" alt="" id="backgroundImage">
+            <img src="../images/Terrain/Terrain (16x16).png" alt="" id="terrainImage">
+            <img src="../images/Enemies/Chicken/Run (32x34).png" id="enemyImage1">
+            <img src="../images/Enemies/Mushroom/Run (32x32).png" id="enemyImage2">
+            <script src="../JS/wip_script.js"></script>
+        </div>   
     </body>
 </html>
