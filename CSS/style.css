@@ -421,6 +421,7 @@ input[name="r"] {									/*Radio-Buttons werden ausgeblendet*/
     align-items: center;
     height: 80vh;                                                                    /* 100% viewheight*/
     flex-direction: column;                                                            /* Standard-Verteilung ist "row"; jetzt wird vertikal verteilt */
+	margin: 5rem 0;
 }
   
 .gurkanary_container >h1 {
