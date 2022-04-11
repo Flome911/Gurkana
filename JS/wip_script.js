@@ -23,15 +23,7 @@ window.addEventListener('load', function(){                                     
                         }
                 }
             });
-                /*if( e.key === 'ArrowDown' ||
-                    e.key === 'ArrowUp' ||
-                    e.key === 'ArrowLeft' ||
-                    e.key === 'ArrowRight' 
-                    && this.keys.indexOf(e.key) === -1){                        // checks for specific keys and if the keys arent in the array yet (-1 means not in the array)
-                    this.keys.push(e.key)                                       // Push pressed Key into array
-                }
-                console.log(e.key, this.keys);                                  // console.log to see if the array is working
-            }); */
+    
             window.addEventListener('keyup', e => {                             // => arrow function for "lexical scoping", if you instantiate "this." in new brackets it wont remember that its referring to the constructor
                 if( e.key === 'ArrowDown' ||
                     e.key === 'ArrowUp' ||
@@ -65,8 +57,6 @@ window.addEventListener('load', function(){                                     
         }
 
         draw(context) {
-            //context.fillStyle = 'white';
-            //context.fillRect(this.x, this.y, this.width, this.height);
             context.drawImage(this.image, this.frameX * this.width, this.frameY * this.height, this.width, this.height, this.x , this.y, this.width, this.height); // drawing image from source this.image, with source sx sy swidth sheight into destinationx y w h
         }
 
@@ -108,7 +98,7 @@ window.addEventListener('load', function(){                                     
                 if (input.keys.indexOf('ArrowUp') > -1 && this.onGround()) {                    
                     this.vy -= 17;
                 }
-            } else if (input.keys.indexOf('ArrowUp') > -1 && this.onGround()) {            
+            } else if (input.keys.indexOf('ArrowUp') > -1 && this.onGround()) { // if up arrow is pressed, velocity is set to -17 => player moves up        
                 this.vy -= 17;
             } else {
                 this.speed = 0;

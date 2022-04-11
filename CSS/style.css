@@ -51,26 +51,15 @@ body {
     align-items: center;
     cursor: pointer; /* mauszeiger wird zu hand mit finger pointer */
     text-decoration: none;
-    padding-left: 30px;
+    border-radius: 50%;
 }
 
-#navbar__logo .span { /*tatsaechliche logo-span*/
+#navbar__logo{ /*tatsaechliche logo-span*/
     padding: 0%;
     margin: 0%;
+    padding-left: 30px;
     font-size: 1rem;
 }
-
-#navbar__logo:hover { 
-    background: #E85A4F;
-    background-size: 100%;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-text-fill-color: transparent;
-    transition: 0.3s ease all; /*weicher uebergang bei hover animation*/
-}
-
 
 .navbar__menu { /* hier sind die navbar items drin*/
     display: flex;
@@ -147,19 +136,18 @@ body {
     grid-template-columns: 1fr 1fr; /* bild von gemüse/banane und box mit text nebeneinander, gleich große felder*/
     align-items: center;
     justify-content: center;
-    margin: 0 auto;
+    margin: 0 auto;     /* margin auto = links und rechts gleich groß */
     height: 80%;
     z-index: 1;
     width: 100%;
     max-width: 1300px;
-    padding: 0 50px;
 }
 
 .home_img {
-    margin: 1rem;
+    margin: 5rem;
     height: 400px;
     width: 300px;
-    border-radius: 10px;
+    border-radius: 10px;        /* abrundung der ecken */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -171,8 +159,10 @@ body {
 
 
 .home_aboutme {
+    margin-left: 5rem;
     text-align: justify;
     color: #fff;
+    padding-right: 25px;
 }
 
 .lebenslauf {
@@ -181,80 +171,124 @@ body {
     background: linear-gradient(to right, #C8C3A5, #D8C3A5, #E8C3A5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     color: #fff;
     display: flex;
-    flex-direction: column; /* mittig als säule*/
+    flex-direction: row; /* mittig als säule*/
     justify-content: center; /* hier mittig */
     align-items: center; /*Querachse*/
     width: 100%;
     max-width: 100%;
     overflow: hidden;
-    padding: 3rem 0;
 }
 
-
-.lebenslauf_container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 2rem auto;
-    height: 80%;
-    z-index: 1;
-    width: 100%;
-    max-width: 100%;
-    padding: 0 50px;
-}
-
-.lltitel {
-    margin-top: -20rem;
-    margin-left: 1rem;
-    max-width: 100%;
-}
-
-.table_container {
+.rahmenLL {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-    margin-left: -10rem;
-    margin-top: 2rem;
+    max-width: 1300px;
+    grid-template-columns: 1fr;
+    width: 100%;
     max-width: 1300px;
 }
 
-@media screen and (max-width: 1000px) {
+.grid-container {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    display: grid;
+    gap: 10px;
+    padding: 10px;
+    align-items: left;
+    justify-content: center;
+    margin-left: 3rem;
+    width: 95%;
+    max-width: 1300px;
+}
+  
+.grid-item {
+    padding: 20px;
+    color: #fff;
+}
 
+.item1 {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+}
+  
+.item2 {
+    grid-column: 1 / span 2;
+    grid-row: 2;
+}
+  
+.item3 {
+    grid-column: 3 / span 2;
+    grid-row: 2;
+    width: fit-content;
+}
+  .item4 {
+    grid-column: 1;
+    grid-row: 3;
+}
+  
+.item5 {
+    grid-column: 2;
+    grid-row: 3;
+}
+    
+.item6 {
+    grid-column: 3;
+    grid-row: 3;
+}
+  
+.item7 {
+    padding-right: 25px;
+    grid-column: 4;
+    grid-row: 3;
+    width: fit-content;
+}
+  
+.item8 {
+    grid-column: 1 / span 2;
+    grid-row: 4;
+}
+  
+.item9 {
+    grid-column: 3 / span 2;
+    grid-row: 4;
+    width: fit-content;
+}
+  
+.item10 {
+    grid-column: 1;
+    grid-row: 5;
+}
+  
+.item11 {
+    grid-column: 2;
+    grid-row: 5;
+}
+  
+.item12 {
+    grid-column: 3;
+    grid-row: 5;
+}
+  
+.item13 {
+    grid-column: 4;
+    grid-row: 5;
+    width: fit-content;
+}
+
+@media screen and (max-width: 1000px) {
     .lebenslauf {
         padding: 0;
-
     }
-
     .lebenslauf_container > h1 {
         margin-top: -25rem;
     }
     .table_container {
         grid-template-columns: 1fr 1fr;
     }
-
-}
-
-@media screen and (max-width: 700px) {
-
-    .lebenslauf {
-        padding: 0;
-
-    }
-
-    .lebenslauf_container > h1 {
-        margin-top: -45rem;
-    }
-    .table_container {
-        grid-template-columns: 1fr;
-    }
-
 }
 
 .daten {
     width: 100%;
     max-width: 100%;
-    margin: 0rem 2rem;
-    float: left;
+    margin: 0rem -rem;
 }
 
 dd {
@@ -308,20 +342,22 @@ input[type=text], textarea {
     text-align: center;
     color: #fff;
 }
+
 .slideshow{
+    user-select: none;
     margin-top: 20px;
-    width: 700px;
+    width: 300px;
     height: 400px;
     overflow: hidden;
 }
-.rahmen{
 
+.rahmen{
     position: relative;
     top: 50%;
     left: 50%;
-    border-radius: 5%;
     transform: translate(-50%,-50%);
 }
+
 .navigation{
     position: absolute;
     bottom: 20px;
@@ -329,6 +365,7 @@ input[type=text], textarea {
     transform: translateX(-50%);
     display: flex;
 }
+
 .button{
     width: 50px;
     height: 10px;
@@ -339,37 +376,38 @@ input[type=text], textarea {
     cursor: pointer;
     transition: 0.4s;
 }
-.button:hover{
+
+.button:hover {
     background: #000000;
 }
   
-input[name="r"]{
+input[name="r"] {
       position: absolute;
       visibility: hidden;
 }
   
-.slides{
+.slides {
     width: 500%;
     height: 100%;
     display: flex;
 }
   
-.bild{
+.bild {
     width: 20%;
     transition: 0.6s;
 }
-.bild img{
+.bild img {
     width: 100%;
-    height: 100%;
+    height: 80%;
 }
   
-#r1:checked ~ .s1{
+#r1:checked ~ .s1 {
     margin-left: 0;
 }
-#r2:checked ~ .s1{
+#r2:checked ~ .s1 {
     margin-left: -20%;
 }
-#r3:checked ~ .s1{
+#r3:checked ~ .s1 {
     margin-left: -40%;
 }
 
@@ -381,19 +419,23 @@ input[name="r"]{
     background: linear-gradient(to right, #C8C3A5, #D8C3A5, #E8C3A5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */                                                                                 /* Zentrieren: */
     justify-content: center;
     align-items: center;
-    height: 89vh;                                                                    /* 100% viewheight*/
+    height: 80vh;                                                                    /* 100% viewheight*/
     flex-direction: column;                                                            /* Standard-Verteilung ist "row"; jetzt wird vertikal verteilt */
-  }
+}
   
-  #memory {
+.gurkanary_container >h1 {
+    margin-bottom: 1rem;
+}
+
+#memory {
     display: grid;                                                                    /* Gitter erstellen */
     grid-template-rows: repeat(4, 8rem);                                              /* 4 Reihen a achtfacher StandardSchriftgröße */
     grid-template-columns: repeat(4, 8rem);                                           /* 4 Spalten a achtfacher StandardSchriftgröße */
     perspective: 800px;                                                               /* Karten kommen beim Rotieren nicht zu weit heraus, aber ein perspektivischer Effekt ist dennoch spürbar */
     grid-gap: 2rem;                                                                   /* Gibt den Karten Raum zum Atmen */
-  }
+}
   
-  .back {
+.back {
     background:
     radial-gradient(black 15%, transparent 16%) 0 0,
     radial-gradient(black 15%, transparent 16%) 8px 8px,
@@ -401,21 +443,22 @@ input[name="r"]{
     radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
     background-color:#282828;
     background-size:16px 16px;                                                     /* Hintergrundfarbe der Karten: weiß */
-  }
+}
   
-  .face {
-      background-color: #fff;
-  }
-  .face, .back {
+.face {
+    background-color: #fff;
+}
+
+.face, .back {
     position: absolute;                                                               /* erlaubt der Vorder- bzw. Rückseite, sich zu bewegen */
     backface-visibility: hidden;                                                      /* immer nur eine Seite ist sichtbar*/
                                                                                       /* damit die Bilder an das Grid gebunden sind und nicht ins unendliche fließen: */
     width: 100%; 
     height: 100%;
     pointer-events: none;                                                             /* Damit Funktionen, die auf Mausklick reagieren, mir die Karte und nicht die Vorder- oder Rückseite zurückgeben */
-  }
-  
-  .card {
+}
+
+.card {
     background:
     radial-gradient(black 15%, transparent 16%) 0 0,
     radial-gradient(black 15%, transparent 16%) 8px 8px,
@@ -431,12 +474,21 @@ input[name="r"]{
     height: 100%;
     box-shadow: rgba(0,0,0,10) 0px 5px 30px;                                       /* Schatten: Farbton, Form, blur */
     transform: rotateY(-180deg);                                                      /* Karte liegt standardmäßig auf dem Kopf */
-  }
+}
   
-  .toggleCard {
+.toggleCard {
     transform: rotateY(0deg);                                                         /* Rotiert Karte, so dass sie aufgedeckt ist */
-  }
+}
+
 
 .gametitle {
+    display: flex;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
     font-size: 2rem;
+}
+
+.gametitle>h1 {
+    width: fit-content;
 }

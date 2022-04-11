@@ -4,14 +4,12 @@
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-
 }
 
 body {
     background: #D8C3A5;
     background: -webkit-linear-gradient(to right, #C8C3A5, #D8C3A5, #E8C3A5);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #C8C3A5, #D8C3A5, #E8C3A5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
 }
 
 
@@ -107,13 +105,11 @@ body {
     transition: all 0.3s ease; /*zusaetzlich mit hover transition um weicheren uebergang zu animieren*/
 }
 
-
 .navbar__links:hover {
     color: #E85A4F;
     transition: all 0.3s ease;
     background-color: #d1b791;
 }
-
 
 /* container <div> - dropdown positionieren */
 .dropdown {
@@ -198,10 +194,9 @@ body {
     position: absolute;
     left: calc(var(--left) * 1%);
     height: 30%;
-
 }
 
-.gametitle{
+.gametitle {
     display: flex;
     color: #fff;
     justify-content: center;

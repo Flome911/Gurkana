@@ -1,6 +1,7 @@
 .walkingVeggies {                                             /*Grundrahmen wird erstellt*/
     position: relative;
     padding-left: 0px;
+    margin-top: 10rem;
 }
 
 .pLLeg, .pRLeg, .cLLeg, .cRLeg, .bLLeg, .bRLeg {            /*Füße werden erstellt und ausgerichtet*/
