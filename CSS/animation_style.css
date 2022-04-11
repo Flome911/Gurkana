@@ -1,43 +1,38 @@
-.walkingVeggies{
+.walkingVeggies {                                             /*Grundrahmen wird erstellt*/
     position: relative;
     padding-left: 0px;
-    }
-.pLLeg, .pRLeg, .cLLeg, .cRLeg, .bLLeg, .bRLeg {
+}
+
+.pLLeg, .pRLeg, .cLLeg, .cRLeg, .bLLeg, .bRLeg {            /*Füße werden erstellt und ausgerichtet*/
     margin-top: 115px;
     margin-left: -85px;
     height: 50px;
     width: 5px;
     background: #000;
     float:left;
-}
-.finish{
+ }
+
+.finish {                                                    
     padding-left: 80%;
 }
 
 /*Bananen-Animation*/
-.bananaBody {
+.bananaBody {                                           /*Possition der Banane wird festgelegt*/
     float:left;
     margin-left: -130px;
 }
 
-.bananaMove {     
+.bananaMove {                                           /*Animation Banane*/  
     -webkit-animation: Body 6s 1 4s linear;
-    position: absolute;
-    
-}
-.banana {
-    position:flex;
- 
+    position: absolute; 
 }
 
-
-
-.bRLeg {
+.bRLeg {                                                /*Animation rechtes Bein*/
     -webkit-transform-origin: 0 0;
     -webkit-animation: movement1 0.1s 4s alternate infinite ease-out;
-
 }
-.bLLeg {
+
+.bLLeg {                                                /*Animation linkes Bein*/
     -webkit-transform-origin: 0 0;
     -webkit-animation: movement2 0.1s 4s alternate infinite ease-in;
 }
@@ -53,21 +48,15 @@
     position: absolute;
 }
 
-.cucumber {
-    position:flex;
- 
-}
-
 .cRLeg {
     -webkit-transform-origin: 0 0;
     -webkit-animation: movement1 0.2s 4s alternate infinite ease-out;
-
 }
+
 .cLLeg {
     -webkit-transform-origin: 0 0;
     -webkit-animation: movement2 0.2s 4s alternate infinite ease-in;
 }
-
 
 /*Kartoffel-Animation*/
 .potatoeBody {
@@ -80,48 +69,27 @@
     position: absolute;
 }
 
-.potatoe {
-    position:flex;
- 
-}
-
-
-
-
 .pRLeg {
     -webkit-transform-origin: 0 0;
     -webkit-animation: movement1 0.3s 4s alternate infinite ease-out;
-
 }
+
 .pLLeg {
     -webkit-transform-origin: 0 0;
     -webkit-animation: movement2 0.3s 4s alternate infinite ease-in;
 }
 
-/*Bewegung von links nach rechts*/
-@-webkit-keyframes Body
-{
+@-webkit-keyframes Body {                                 /*Bewegung von links nach rechts*/  
 from {margin-left:0px;}
 to {margin-left:100%;}
+}
 
+@-webkit-keyframes movement1 {                            /* Bewegung linker Fuß */
+    from {-webkit-transform:rotate(-30deg);}
+    to {-webkit-transform:rotate(30deg);}
 }
-/* Bewegung linker Fuß */
-@-webkit-keyframes movement1
-{
-    from {
-        -webkit-transform:rotate(-30deg);
-    }
-    to {
-        -webkit-transform:rotate(30deg);
-    }
-}
-/* Bewegung rechter Fuß*/
-@-webkit-keyframes movement2
-{
-    from {
-        -webkit-transform:rotate(30deg);
-    }
-    to {
-        -webkit-transform:rotate(-30deg);
-    }
+
+@-webkit-keyframes movement2 {                           /* Bewegung rechter Fuß*/
+    from {-webkit-transform:rotate(30deg);}
+    to {-webkit-transform:rotate(-30deg);}
 }
