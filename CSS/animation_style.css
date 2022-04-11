@@ -1,0 +1,127 @@
+.walkingVeggies{
+    position: relative;
+    padding-left: 0px;
+    }
+.pLLeg, .pRLeg, .cLLeg, .cRLeg, .bLLeg, .bRLeg {
+    margin-top: 115px;
+    margin-left: -85px;
+    height: 50px;
+    width: 5px;
+    background: #000;
+    float:left;
+}
+.finish{
+    padding-left: 80%;
+}
+
+/*Bananen-Animation*/
+.bananaBody {
+    float:left;
+    margin-left: -130px;
+}
+
+.bananaMove {     
+    -webkit-animation: Body 6s 1 4s linear;
+    position: absolute;
+    
+}
+.banana {
+    position:flex;
+ 
+}
+
+
+
+.bRLeg {
+    -webkit-transform-origin: 0 0;
+    -webkit-animation: movement1 0.1s 4s alternate infinite ease-out;
+
+}
+.bLLeg {
+    -webkit-transform-origin: 0 0;
+    -webkit-animation: movement2 0.1s 4s alternate infinite ease-in;
+}
+
+/*Gurken-Animation*/
+.cucumberBody {
+    float:left;
+    margin-left: -130px;
+}
+
+.cucumberMove {     
+    -webkit-animation: Body 10s 1 4s linear;
+    position: absolute;
+}
+
+.cucumber {
+    position:flex;
+ 
+}
+
+.cRLeg {
+    -webkit-transform-origin: 0 0;
+    -webkit-animation: movement1 0.2s 4s alternate infinite ease-out;
+
+}
+.cLLeg {
+    -webkit-transform-origin: 0 0;
+    -webkit-animation: movement2 0.2s 4s alternate infinite ease-in;
+}
+
+
+/*Kartoffel-Animation*/
+.potatoeBody {
+    float:left;
+    margin-left: -132px;
+}
+
+.potatoeMove {     
+    -webkit-animation: Body 11s 1 4s linear;
+    position: absolute;
+}
+
+.potatoe {
+    position:flex;
+ 
+}
+
+
+
+
+.pRLeg {
+    -webkit-transform-origin: 0 0;
+    -webkit-animation: movement1 0.3s 4s alternate infinite ease-out;
+
+}
+.pLLeg {
+    -webkit-transform-origin: 0 0;
+    -webkit-animation: movement2 0.3s 4s alternate infinite ease-in;
+}
+
+/*Bewegung von links nach rechts*/
+@-webkit-keyframes Body
+{
+from {margin-left:0px;}
+to {margin-left:100%;}
+
+}
+/* Bewegung linker Fuß */
+@-webkit-keyframes movement1
+{
+    from {
+        -webkit-transform:rotate(-30deg);
+    }
+    to {
+        -webkit-transform:rotate(30deg);
+    }
+}
+/* Bewegung rechter Fuß*/
+@-webkit-keyframes movement2
+{
+    from {
+        -webkit-transform:rotate(30deg);
+    }
+    to {
+        -webkit-transform:rotate(-30deg);
+    }
+}

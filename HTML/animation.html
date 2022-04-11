@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/animation_style.css">
+</head>
+<body>
+    <!--NavBar-->
+    <nav class="navbar">
+        <div class="navbar__container">
+            <a href="index.html" id="navbar__logo"><img src="../images/GurKaNa.svg" alt="Foto" width="75"></a>
+            
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a href="index.html" class="navbar__links" id="home-page">Home</a>
+                </li>
+                <li class="navbar__item dropdown">
+                    <a href="#" class="navbar__links dropbtn" id="projekte-page">Projekte</a>
+                        <div class="dropdown-content">
+                            <a href="gurkanary.html">GurKaNary</a>
+                            <a href="rungame.html">Kartoffelrun</a>
+                            <a href="WorkInProgressGame.html">WIP-Game</a>
+                            <a href="animation.html">Animation</a>
+                         </div>
+                </li>
+                <li class="navbar__item dropdown">
+                        <a href="#" class="navbar__links dropbtn" id="lebenslauf-page">Über uns</a>
+                        <div class="dropdown-content">
+                          <a href="landgurkenzel.html">Gurke</a>
+                          <a href="bananenhuber.html">Banane</a>
+                          <a href="kuecuekkartoffel.html">Kartoffel</a>
+                        </div>
+                </li>
+                <li class="navbar__item">
+                    <a href="kontakt.html" class="navbar__links" id="contact-page">Kontakt</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="walkingVeggies">
+        <div class="bananaMove">
+           <div class="bananaBody">
+               <img class="banana>"src="../images/Banane.svg" alt="Banane" width="150px">
+           </div>
+           <p class="bLLeg"></p>
+           <p class="bRLeg"></p>
+        </div>
+
+        <div class="cucumberMove">
+            <div class="cucumberBody">
+                <img class="cucumber"src="../images/Gurke.svg" alt="Gurke" width="150px">
+            </div>
+            <p class="cLLeg"></p>
+            <p class="cRLeg"></p>
+         </div>
+
+         <div class="potatoeMove">
+            <div class="potatoeBody">
+                <img class="potatoe"src="../images/Kartoffel.svg" alt="Kartoffel" width="150px">
+            </div>
+            <p class="pLLeg"></p>
+            <p class="pRLeg"></p>
+         </div>
+         <div class="finish"><img src="../images/finish.png" alt="finish" width="200px"></div>
+         <audio autoplay 1>
+            <source src="../sounds/rennen.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+</body>
+</html>

@@ -11,6 +11,7 @@ body {
     background: #D8C3A5;
     background: -webkit-linear-gradient(to right, #C8C3A5, #D8C3A5, #E8C3A5);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #C8C3A5, #D8C3A5, #E8C3A5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 
@@ -54,6 +55,7 @@ body {
 #navbar__logo { /*container fuer logo*/
     background: #fff;  
     background-size: 100%;
+    background-clip: text;
     -webkit-background-clip: text; /*background = text*/
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent; /*macht schrift transparent*/
@@ -75,6 +77,7 @@ body {
 #navbar__logo:hover { 
     background: #E85A4F;
     background-size: 100%;
+    background-clip: text;
     -webkit-background-clip: text;
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -196,4 +199,16 @@ body {
     left: calc(var(--left) * 1%);
     height: 30%;
 
+}
+
+.gametitle{
+    display: flex;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}
+
+.gametitle>h1 {
+    width: fit-content;
 }
