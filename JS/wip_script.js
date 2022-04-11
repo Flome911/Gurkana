@@ -178,9 +178,9 @@ window.addEventListener('load', function(){                                     
             context.drawImage(this.image, this.frameX * this.width, 0, this.width, this.height, this.x, this.y, this.width, this.height)
         }
 
-        update(deltaTime) {
+        update(deltaTime) {                                                         //enemy update function
             //animation
-            if (this.frameTimer > this.frameInterval) { 
+            if (this.frameTimer > this.frameInterval) {             
                 if (this.frameX >= this.maxFrame) this.frameX = 0;
                 else this.frameX++;
                 this.frameTimer = 0;
@@ -196,7 +196,7 @@ window.addEventListener('load', function(){                                     
     }
 
     class Terrain {
-        constructor(gameWidth, gameHeight) {
+        constructor(gameWidth, gameHeight) {                                   // Terrain class attributes
             this.gamewidth = gameWidth;
             this.gameHeight = gameHeight;
             this.width = 100;
@@ -205,36 +205,36 @@ window.addEventListener('load', function(){                                     
             this.y = 200;
         }
 
-        draw(context) {
+        draw(context) {                                                        // draws a black bar for terrain
             context.fillStyle = 'black';
             context.fillRect(this.x, this.y, this.width, this.height);
         }
     }
 
 
-    function displayStatusText(context){
-        context.fillStyle = 'black';
+    function displayStatusText(context){    
+        context.fillStyle = 'black';                        
         context.font = '15px Helvetica';
-        context.fillText('Score ' + score, 40, 30);
+        context.fillText('Score ' + score, 40, 30);                             // displays score
         if (gameOver) {
             context.textAlign = 'center';
             context.fillStyle = 'black';
-            context.fillText('Game Over!', canvas.width/2, canvas.height/2);
+            context.fillText('Game Over!', canvas.width/2, canvas.height/2);    // displays gameover
         }
     }
 
-    function handleEnemies(deltaTime){
+    function handleEnemies(deltaTime){                                          //creates enemies and pushes them into array
         if(enemyTimer > enemyInterval){
             enemies.push(new Enemy(canvas.width, canvas.height)); 
             enemyTimer = 0;  
-        } else {
+        } else {                                                                // timmer to count enemy spawn time
             enemyTimer += deltaTime;
         }
-        enemies.forEach(enemy => {
+        enemies.forEach(enemy => {                                              // draws each enemy and updates them
             enemy.draw(ctx);
             enemy.update(deltaTime);
         })
-        enemies = enemies.filter(enemy => !enemy.markedForDel)
+        enemies = enemies.filter(enemy => !enemy.markedForDel)                  // filters out enemies that are not marked for deletion
 
     }
 
@@ -261,16 +261,16 @@ window.addEventListener('load', function(){                                     
     function animate(timeStamp) {                                               // animation loop 
         const deltaTime = timeStamp - lastTime;
         lastTime = timeStamp;
-        ctx.clearRect(0,0,canvas.width, canvas.height);
+        ctx.clearRect(0,0,canvas.width, canvas.height);                         //clears canvas
         background.draw(ctx);
         terrain.draw(ctx);
         handleEnemies(deltaTime);
         player.draw(ctx);
         player.update(input, deltaTime, enemies, terrain);
         displayStatusText(ctx);
-        if (!gameOver) {
+        if (!gameOver) {                                                        // only keeps requesting AnimationFrame if gameOver is wrong
             requestAnimationFrame(animate);
-        } else {document.addEventListener("keydown", handleStart, {once: true})}
+        } else {document.addEventListener("keydown", handleStart, {once: true})} // adds eventlistener to start the game again if gameover is true
     }
     animate(0);
 
